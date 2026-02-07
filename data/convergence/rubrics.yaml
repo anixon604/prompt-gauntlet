@@ -1,0 +1,55 @@
+# Rubric definitions for convergence scenarios
+
+error_handling:
+  description: "Design a comprehensive error handling system for a production web application"
+  required_invariants:
+    - "input validation"
+    - "exception hierarchy"
+    - "logging"
+    - "graceful degradation"
+    - "user-friendly error messages"
+  bonus_concepts:
+    - "circuit breaker"
+    - "retry logic"
+    - "exponential backoff"
+    - "correlation id"
+    - "structured logging"
+    - "fallback"
+    - "dead letter queue"
+    - "health check"
+  min_invariants_for_pass: 4
+  target_keywords:
+    - "validation"
+    - "exception"
+    - "log"
+    - "degrad"
+    - "error message"
+    - "retry"
+    - "circuit"
+    - "fallback"
+
+api_design:
+  description: "Design a RESTful API for a task management system"
+  required_invariants:
+    - "resource naming"
+    - "HTTP methods"
+    - "status codes"
+    - "authentication"
+    - "pagination"
+  bonus_concepts:
+    - "rate limiting"
+    - "versioning"
+    - "HATEOAS"
+    - "idempotency"
+    - "caching headers"
+    - "OpenAPI spec"
+  min_invariants_for_pass: 4
+  target_keywords:
+    - "REST"
+    - "endpoint"
+    - "GET"
+    - "POST"
+    - "auth"
+    - "token"
+    - "paginate"
+    - "status"

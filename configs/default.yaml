@@ -1,0 +1,36 @@
+# PromptBench default configuration
+
+model:
+  name: mock
+  temperature: 0.0
+  max_tokens: 4096
+
+budget:
+  tokens: 10000
+  turns: 20
+
+seeds: 3
+
+scenarios:
+  - all
+
+judges:
+  rubric_model: mock
+  embedding_model: all-MiniLM-L6-v2
+  ensemble_weights:
+    embedding: 0.3
+    rubric: 0.4
+    constraint: 0.3
+  disagreement_penalty: 0.1
+
+scoring:
+  family_weights:
+    classification: 0.25
+    constraint: 0.25
+    tool_use: 0.25
+    convergence: 0.25
+  metric_weights:
+    task_success: 0.5
+    efficiency: 0.2
+    robustness: 0.15
+    recovery: 0.15

@@ -1,0 +1,404 @@
+{
+  "schema_version": "1.0",
+  "run_id": "run_1770502148_09d090dd",
+  "model": "mock",
+  "entries": [
+    {
+      "scenario_id": "classification/sentiment",
+      "family": "classification",
+      "scenario_name": "Classification - Sentiment",
+      "metrics": {
+        "accuracy": {
+          "name": "accuracy",
+          "values": [
+            0.36363636363636365,
+            0.2727272727272727,
+            0.5454545454545454
+          ],
+          "mean": 0.39393939393939387,
+          "median": 0.36363636363636365,
+          "std": 0.1133835571749679,
+          "p10": 0.2909090909090909,
+          "p90": 0.509090909090909,
+          "failure_rate": 0.0
+        },
+        "consistency": {
+          "name": "consistency",
+          "values": [
+            0.6666666666666667,
+            0.33333333333333337,
+            0.6666666666666667
+          ],
+          "mean": 0.5555555555555556,
+          "median": 0.6666666666666667,
+          "std": 0.15713484026367724,
+          "p10": 0.4,
+          "p90": 0.6666666666666667,
+          "failure_rate": 0.0
+        },
+        "efficiency": {
+          "name": "efficiency",
+          "values": [
+            0.9852727272727273,
+            0.9852727272727273,
+            0.9852727272727273
+          ],
+          "mean": 0.9852727272727272,
+          "median": 0.9852727272727273,
+          "std": 1.1102230246251565e-16,
+          "p10": 0.9852727272727273,
+          "p90": 0.9852727272727273,
+          "failure_rate": 0.0
+        },
+        "predictions_made": {
+          "name": "predictions_made",
+          "values": [
+            11.0,
+            11.0,
+            11.0
+          ],
+          "mean": 11.0,
+          "median": 11.0,
+          "std": 0.0,
+          "p10": 11.0,
+          "p90": 11.0,
+          "failure_rate": 0.0
+        },
+        "task_success": {
+          "name": "task_success",
+          "values": [
+            0.0,
+            0.0,
+            1.0
+          ],
+          "mean": 0.3333333333333333,
+          "median": 0.0,
+          "std": 0.4714045207910317,
+          "p10": 0.0,
+          "p90": 0.8,
+          "failure_rate": 0.6666666666666666
+        }
+      },
+      "seeds_run": 3
+    },
+    {
+      "scenario_id": "constraint/json_schema",
+      "family": "constraint",
+      "scenario_name": "Constraint - Json Schema",
+      "metrics": {
+        "attempts": {
+          "name": "attempts",
+          "values": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "mean": 1.0,
+          "median": 1.0,
+          "std": 0.0,
+          "p10": 1.0,
+          "p90": 1.0,
+          "failure_rate": 0.0
+        },
+        "efficiency": {
+          "name": "efficiency",
+          "values": [
+            0.967,
+            0.967,
+            0.967
+          ],
+          "mean": 0.967,
+          "median": 0.967,
+          "std": 0.0,
+          "p10": 0.967,
+          "p90": 0.967,
+          "failure_rate": 0.0
+        },
+        "first_attempt_pass": {
+          "name": "first_attempt_pass",
+          "values": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "mean": 1.0,
+          "median": 1.0,
+          "std": 0.0,
+          "p10": 1.0,
+          "p90": 1.0,
+          "failure_rate": 0.0
+        },
+        "pass_rate": {
+          "name": "pass_rate",
+          "values": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "mean": 1.0,
+          "median": 1.0,
+          "std": 0.0,
+          "p10": 1.0,
+          "p90": 1.0,
+          "failure_rate": 0.0
+        },
+        "recovery_rate": {
+          "name": "recovery_rate",
+          "values": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "mean": 0.0,
+          "median": 0.0,
+          "std": 0.0,
+          "p10": 0.0,
+          "p90": 0.0,
+          "failure_rate": 1.0
+        },
+        "task_success": {
+          "name": "task_success",
+          "values": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "mean": 1.0,
+          "median": 1.0,
+          "std": 0.0,
+          "p10": 1.0,
+          "p90": 1.0,
+          "failure_rate": 0.0
+        }
+      },
+      "seeds_run": 3
+    },
+    {
+      "scenario_id": "convergence/error_handling",
+      "family": "convergence",
+      "scenario_name": "Convergence - Error Handling",
+      "metrics": {
+        "bonus_coverage": {
+          "name": "bonus_coverage",
+          "values": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "mean": 1.0,
+          "median": 1.0,
+          "std": 0.0,
+          "p10": 1.0,
+          "p90": 1.0,
+          "failure_rate": 0.0
+        },
+        "convergence_rate": {
+          "name": "convergence_rate",
+          "values": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "mean": 0.0,
+          "median": 0.0,
+          "std": 0.0,
+          "p10": 0.0,
+          "p90": 0.0,
+          "failure_rate": 1.0
+        },
+        "efficiency": {
+          "name": "efficiency",
+          "values": [
+            0.87325,
+            0.87325,
+            0.87325
+          ],
+          "mean": 0.87325,
+          "median": 0.87325,
+          "std": 0.0,
+          "p10": 0.87325,
+          "p90": 0.87325,
+          "failure_rate": 0.0
+        },
+        "invariant_coverage": {
+          "name": "invariant_coverage",
+          "values": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "mean": 1.0,
+          "median": 1.0,
+          "std": 0.0,
+          "p10": 1.0,
+          "p90": 1.0,
+          "failure_rate": 0.0
+        },
+        "invariants_matched": {
+          "name": "invariants_matched",
+          "values": [
+            5.0,
+            5.0,
+            5.0
+          ],
+          "mean": 5.0,
+          "median": 5.0,
+          "std": 0.0,
+          "p10": 5.0,
+          "p90": 5.0,
+          "failure_rate": 0.0
+        },
+        "invariants_total": {
+          "name": "invariants_total",
+          "values": [
+            5.0,
+            5.0,
+            5.0
+          ],
+          "mean": 5.0,
+          "median": 5.0,
+          "std": 0.0,
+          "p10": 5.0,
+          "p90": 5.0,
+          "failure_rate": 0.0
+        },
+        "keyword_coverage": {
+          "name": "keyword_coverage",
+          "values": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "mean": 1.0,
+          "median": 1.0,
+          "std": 0.0,
+          "p10": 1.0,
+          "p90": 1.0,
+          "failure_rate": 0.0
+        },
+        "task_success": {
+          "name": "task_success",
+          "values": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "mean": 1.0,
+          "median": 1.0,
+          "std": 0.0,
+          "p10": 1.0,
+          "p90": 1.0,
+          "failure_rate": 0.0
+        }
+      },
+      "seeds_run": 3
+    },
+    {
+      "scenario_id": "tool_use/research_calculate",
+      "family": "tool_use",
+      "scenario_name": "Tool Use - Research Calculate",
+      "metrics": {
+        "answer_accuracy": {
+          "name": "answer_accuracy",
+          "values": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "mean": 0.0,
+          "median": 0.0,
+          "std": 0.0,
+          "p10": 0.0,
+          "p90": 0.0,
+          "failure_rate": 1.0
+        },
+        "efficiency": {
+          "name": "efficiency",
+          "values": [
+            0.8666666666666667,
+            0.8666666666666667,
+            0.8666666666666667
+          ],
+          "mean": 0.8666666666666667,
+          "median": 0.8666666666666667,
+          "std": 0.0,
+          "p10": 0.8666666666666667,
+          "p90": 0.8666666666666667,
+          "failure_rate": 0.0
+        },
+        "recovery_rate": {
+          "name": "recovery_rate",
+          "values": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "mean": 0.0,
+          "median": 0.0,
+          "std": 0.0,
+          "p10": 0.0,
+          "p90": 0.0,
+          "failure_rate": 1.0
+        },
+        "task_success": {
+          "name": "task_success",
+          "values": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "mean": 0.0,
+          "median": 0.0,
+          "std": 0.0,
+          "p10": 0.0,
+          "p90": 0.0,
+          "failure_rate": 1.0
+        },
+        "tool_call_correctness": {
+          "name": "tool_call_correctness",
+          "values": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "mean": 1.0,
+          "median": 1.0,
+          "std": 0.0,
+          "p10": 1.0,
+          "p90": 1.0,
+          "failure_rate": 0.0
+        },
+        "tools_used": {
+          "name": "tools_used",
+          "values": [
+            3.0,
+            3.0,
+            3.0
+          ],
+          "mean": 3.0,
+          "median": 3.0,
+          "std": 0.0,
+          "p10": 3.0,
+          "p90": 3.0,
+          "failure_rate": 0.0
+        },
+        "total_tool_calls": {
+          "name": "total_tool_calls",
+          "values": [
+            3.0,
+            3.0,
+            3.0
+          ],
+          "mean": 3.0,
+          "median": 3.0,
+          "std": 0.0,
+          "p10": 3.0,
+          "p90": 3.0,
+          "failure_rate": 0.0
+        }
+      },
+      "seeds_run": 3
+    }
+  ],
+  "weighted_score": null
+}
