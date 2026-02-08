@@ -4,12 +4,12 @@ from __future__ import annotations
 
 from pathlib import Path
 
-from promptbench.adapters.mock import MockModelClient
-from promptbench.engine.prompter import ReplayPrompter, ScriptedPrompter
-from promptbench.engine.runner import run_single_scenario
-from promptbench.engine.trace import TraceReader, TraceWriter
-from promptbench.scenarios.registry import get_registry
-from promptbench.types import Message, Role, TraceEvent, TraceEventType, Usage
+from promptgauntlet.adapters.mock import MockModelClient
+from promptgauntlet.engine.prompter import ReplayPrompter, ScriptedPrompter
+from promptgauntlet.engine.runner import run_single_scenario
+from promptgauntlet.engine.trace import TraceReader, TraceWriter
+from promptgauntlet.scenarios.registry import get_registry
+from promptgauntlet.types import Message, Role, TraceEvent, TraceEventType, Usage
 
 
 class TestTraceWriterReader:
@@ -107,7 +107,7 @@ class TestEngineRunner:
     def test_replay_prompter(self) -> None:
         """ReplayPrompter replays messages in order."""
         prompter = ReplayPrompter(["msg1", "msg2", "msg3"])
-        from promptbench.scenarios.registry import get_registry
+        from promptgauntlet.scenarios.registry import get_registry
 
         scenario = get_registry().get_scenario("constraint/json_schema")
         msgs: list[Message] = []

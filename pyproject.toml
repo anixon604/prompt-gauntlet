@@ -3,7 +3,7 @@ requires = ["hatchling"]
 build-backend = "hatchling.build"
 
 [project]
-name = "promptbench"
+name = "promptgauntlet"
 version = "0.1.0"
 description = "A reproducible, model-agnostic Prompt Aptitude Test Suite"
 readme = "README.md"
@@ -27,13 +27,13 @@ dev = [
     "pytest-cov>=4.0",
     "ruff>=0.4",
 ]
-all = ["promptbench[openai,judges,dev]"]
+all = ["promptgauntlet[openai,judges,dev]"]
 
 [project.scripts]
-promptbench = "promptbench.cli:main"
+promptgauntlet = "promptgauntlet.cli:main"
 
 [tool.hatch.build.targets.wheel]
-packages = ["src/promptbench"]
+packages = ["src/promptgauntlet"]
 
 [tool.ruff]
 target-version = "py311"

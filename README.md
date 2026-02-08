@@ -1,4 +1,4 @@
-# PromptBench
+# PromptGauntlet
 
 A reproducible, model-agnostic **Prompt Aptitude Test Suite** that measures multi-turn prompting skill across multiple task families. Runs the same scenarios against different LLM providers/models and produces a comparable multi-objective scorecard.
 
@@ -10,22 +10,22 @@ uv venv && source .venv/bin/activate
 uv pip install -e ".[dev]"
 
 # Run all scenarios with the mock model (fully offline)
-promptbench run --model mock --scenarios all --seeds 3
+promptgauntlet run --model mock --scenarios all --seeds 3
 
 # List available scenarios
-promptbench list
+promptgauntlet list
 
 # Re-grade a previous run
-promptbench grade --run <run_id>
+promptgauntlet grade --run <run_id>
 
 # Generate report
-promptbench report --run <run_id>
+promptgauntlet report --run <run_id>
 ```
 
 ## Architecture
 
 ```
-src/promptbench/
+src/promptgauntlet/
   cli.py          # CLI entrypoint (click)
   types.py        # Shared Pydantic models
   config.py       # YAML config loader
@@ -54,21 +54,21 @@ Converge toward a hidden target defined by a rubric with required invariants. Ev
 ## CLI Reference
 
 ```
-promptbench list [--family <name>]
+promptgauntlet list [--family <name>]
     List available scenarios, optionally filtered by task family.
 
-promptbench run --model <name> --scenarios <glob|all> --seeds <N>
+promptgauntlet run --model <name> --scenarios <glob|all> --seeds <N>
                [--budget-tokens <N>] [--budget-turns <N>]
                [--config <path>] [--temperature <float>]
     Run scenarios and produce scorecard + report in runs/<run_id>/.
 
-promptbench human --scenario <id> --model <name> [--config <path>]
+promptgauntlet human --scenario <id> --model <name> [--config <path>]
     Interactive human-in-the-loop mode.
 
-promptbench grade --run <run_id>
+promptgauntlet grade --run <run_id>
     Re-grade from stored traces (deterministic replay).
 
-promptbench report --run <run_id> [--format md,csv,json]
+promptgauntlet report --run <run_id> [--format md,csv,json]
     Generate report artifacts.
 ```
 
@@ -94,11 +94,11 @@ scoring:
 
 ## How to Add a Scenario
 
-1. Create a new directory under `src/promptbench/scenarios/<family>/`
+1. Create a new directory under `src/promptgauntlet/scenarios/<family>/`
 2. Implement a class extending `Scenario` (see `scenarios/base.py`):
    ```python
-   from promptbench.scenarios.base import Scenario, ScenarioResult
-   from promptbench.scenarios.registry import register_scenario
+   from promptgauntlet.scenarios.base import Scenario, ScenarioResult
+   from promptgauntlet.scenarios.registry import register_scenario
 
    @register_scenario
    class MyScenario(Scenario):

@@ -1,11 +1,11 @@
-"""Shared test fixtures for PromptBench."""
+"""Shared test fixtures for PromptGauntlet."""
 
 from __future__ import annotations
 
 import pytest
 
-from promptbench.adapters.mock import MockModelClient
-from promptbench.types import Message, Role
+from promptgauntlet.adapters.mock import MockModelClient
+from promptgauntlet.types import Message, Role
 
 
 @pytest.fixture

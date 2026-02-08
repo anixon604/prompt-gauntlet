@@ -4,15 +4,15 @@ from __future__ import annotations
 
 import json
 
-from promptbench.adapters.mock import MockModelClient
-from promptbench.engine.prompter import ScriptedPrompter
-from promptbench.engine.runner import run_single_scenario
-from promptbench.scenarios.constraint.scenario import (
+from promptgauntlet.adapters.mock import MockModelClient
+from promptgauntlet.engine.prompter import ScriptedPrompter
+from promptgauntlet.engine.runner import run_single_scenario
+from promptgauntlet.scenarios.constraint.scenario import (
     _PERSON_SCHEMA,
     ConstraintScenario,
     validate_json_against_schema,
 )
-from promptbench.types import TaskFamily
+from promptgauntlet.types import TaskFamily
 
 
 class TestConstraintValidator:

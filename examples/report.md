@@ -1,4 +1,4 @@
-# PromptBench Report
+# PromptGauntlet Report
 
 **Run ID:** run_1770502148_09d090dd
 **Model:** mock

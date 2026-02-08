@@ -2,16 +2,16 @@
 
 from __future__ import annotations
 
-from promptbench.adapters.mock import MockModelClient
-from promptbench.engine.prompter import ScriptedPrompter
-from promptbench.engine.runner import run_single_scenario
-from promptbench.scenarios.convergence.scenario import (
+from promptgauntlet.adapters.mock import MockModelClient
+from promptgauntlet.engine.prompter import ScriptedPrompter
+from promptgauntlet.engine.runner import run_single_scenario
+from promptgauntlet.scenarios.convergence.scenario import (
     _DEFAULT_RUBRIC,
     ConvergenceScenario,
     check_invariants,
     check_keywords,
 )
-from promptbench.types import TaskFamily
+from promptgauntlet.types import TaskFamily
 
 
 class TestConvergenceChecks:

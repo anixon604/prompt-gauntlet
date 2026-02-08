@@ -4,10 +4,10 @@ from __future__ import annotations
 
 import pytest
 
-from promptbench.adapters.base import get_adapter
-from promptbench.adapters.local import LocalClient
-from promptbench.adapters.mock import MockModelClient
-from promptbench.types import Message, Role
+from promptgauntlet.adapters.base import get_adapter
+from promptgauntlet.adapters.local import LocalClient
+from promptgauntlet.adapters.mock import MockModelClient
+from promptgauntlet.types import Message, Role
 
 
 class TestMockAdapter:
@@ -46,7 +46,7 @@ class TestMockAdapter:
 
     def test_mock_tool_use_response(self, mock_client: MockModelClient) -> None:
         """Mock produces tool calls when tools are available."""
-        from promptbench.types import ToolSchema
+        from promptgauntlet.types import ToolSchema
 
         messages = [
             Message(role=Role.SYSTEM, content="You are a research assistant with tools."),

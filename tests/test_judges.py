@@ -2,10 +2,10 @@
 
 from __future__ import annotations
 
-from promptbench.judges.constraint import ConstraintJudge
-from promptbench.judges.embedding import EmbeddingJudge
-from promptbench.judges.ensemble import EnsembleJudge
-from promptbench.judges.rubric import RubricJudge
+from promptgauntlet.judges.constraint import ConstraintJudge
+from promptgauntlet.judges.embedding import EmbeddingJudge
+from promptgauntlet.judges.ensemble import EnsembleJudge
+from promptgauntlet.judges.rubric import RubricJudge
 
 
 class TestConstraintJudge:

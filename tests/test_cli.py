@@ -4,7 +4,7 @@ from __future__ import annotations
 
 from click.testing import CliRunner
 
-from promptbench.cli import main
+from promptgauntlet.cli import main
 
 
 class TestCLI:

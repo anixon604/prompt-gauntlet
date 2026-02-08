@@ -4,9 +4,9 @@ from __future__ import annotations
 
 import pytest
 
-from promptbench.tools.calculator import CalculatorTool
-from promptbench.tools.filestore import FileStoreTool
-from promptbench.tools.search import BM25Index, SearchTool
+from promptgauntlet.tools.calculator import CalculatorTool
+from promptgauntlet.tools.filestore import FileStoreTool
+from promptgauntlet.tools.search import BM25Index, SearchTool
 
 
 class TestCalculator:

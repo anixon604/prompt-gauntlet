@@ -2,11 +2,11 @@
 
 from __future__ import annotations
 
-from promptbench.grading.pareto import pareto_rank, weighted_score
-from promptbench.grading.scorer import compute_scorecard
-from promptbench.grading.stats import bootstrap_ci, robust_stats
-from promptbench.scenarios.base import ScenarioResult
-from promptbench.types import MetricValue, Scorecard, ScorecardEntry, TaskFamily
+from promptgauntlet.grading.pareto import pareto_rank, weighted_score
+from promptgauntlet.grading.scorer import compute_scorecard
+from promptgauntlet.grading.stats import bootstrap_ci, robust_stats
+from promptgauntlet.scenarios.base import ScenarioResult
+from promptgauntlet.types import MetricValue, Scorecard, ScorecardEntry, TaskFamily
 
 
 class TestRobustStats:
