@@ -208,5 +208,18 @@ class ConstraintScenario(Scenario):
             "efficiency": efficiency,
         }
 
+    def get_human_brief(self) -> str | None:
+        schema_str = json.dumps(_PERSON_SCHEMA, indent=2)
+        return (
+            "OBJECTIVE: Get the model to output valid JSON that matches the schema below.\n\n"
+            "RULES: The model's reply must be ONLY the JSON object—no markdown, no explanation, "
+            "no code fences. You can paste this schema in your first message so the model knows "
+            "what to produce. If the model adds extra text, ask it to output only the JSON.\n\n"
+            "SCHEMA (required fields: name, age, email, address with street, city, state, zip):\n"
+            f"{schema_str}\n\n"
+            "EXAMPLE valid output: {\"name\": \"Alice\", \"age\": 30, \"email\": \"alice@example.com\", "
+            "\"address\": {\"street\": \"123 Main St\", \"city\": \"Springfield\", \"state\": \"IL\", \"zip\": \"62701\"}}"
+        )
+
     def get_scripted_prompter_policy(self) -> ScriptedPolicy:
         return ConstraintPolicy()

@@ -262,5 +262,20 @@ class ConvergenceScenario(Scenario):
             "invariants_total": float(total),
         }
 
+    def get_human_brief(self) -> str | None:
+        required = ", ".join(_DEFAULT_RUBRIC["required_invariants"])
+        bonus = ", ".join(_DEFAULT_RUBRIC["bonus_concepts"])
+        return (
+            "OBJECTIVE: Get the model to produce a short design document for a "
+            "comprehensive error-handling system (e.g. for a web app).\n\n"
+            "REQUIRED (must cover at least 4 of these): " + required + ".\n\n"
+            "BONUS (improves score): " + bonus + ".\n\n"
+            "HOW: Describe the task in your first message (e.g. 'Describe a comprehensive "
+            "error handling system...'). If the first response is thin, follow up with "
+            "'Expand on X' or 'Add details about Y' until the output covers enough of the "
+            "required concepts. Success = at least 4 required invariants clearly present "
+            "in the model's final output."
+        )
+
     def get_scripted_prompter_policy(self) -> ScriptedPolicy:
         return ConvergencePolicy()

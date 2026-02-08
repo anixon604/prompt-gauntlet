@@ -276,5 +276,16 @@ class ClassificationScenario(Scenario):
             "predictions_made": float(len(predictions)),
         }
 
+    def get_human_brief(self) -> str | None:
+        return (
+            "OBJECTIVE: Get the model to classify text snippets by sentiment.\n\n"
+            "LABELS: The model must respond with exactly one of: positive, negative, neutral.\n\n"
+            "HOW: You don't see ground-truth labels. First establish the task (e.g. ask the model "
+            "to classify text by sentiment; you can give a few example texts and ask for labels). "
+            "Then send more texts and the model must reply with only the label. Success is measured "
+            "by accuracy on a hidden test set—the more correct labels within your turn budget, "
+            "the better."
+        )
+
     def get_scripted_prompter_policy(self) -> ScriptedPolicy:
         return ClassificationPolicy(self._test)

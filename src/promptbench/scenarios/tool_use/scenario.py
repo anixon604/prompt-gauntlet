@@ -187,5 +187,19 @@ class ToolUseScenario(Scenario):
             "total_tool_calls": float(total_tool_calls),
         }
 
+    def get_human_brief(self) -> str | None:
+        return (
+            "OBJECTIVE: Get the model to (1) search for Springfield IL population, "
+            "(2) calculate GDP per capita (Springfield GDP is 7.6 billion dollars), "
+            "(3) store the result in the file_store with key 'gdp_per_capita'.\n\n"
+            "TOOLS: The model has access to: search (query a knowledge corpus), "
+            "calculator (evaluate math expressions), file_store (read/write/list). "
+            "You instruct the model; it will call tools and reply with results.\n\n"
+            "SUCCESS: The run succeeds when the model gives a final answer with the "
+            "per-capita value (approximately 1788) and has used the tools correctly. "
+            "Guide it step by step if needed (e.g. 'Search for Springfield IL population', "
+            "then 'Calculate GDP per capita using 7.6 billion and that population')."
+        )
+
     def get_scripted_prompter_policy(self) -> ScriptedPolicy:
         return ToolUsePolicy()

@@ -237,6 +237,13 @@ def run_human(config: BenchConfig, scenario_id: str) -> None:
     console.print(f"[dim]{scenario.config.description}[/dim]")
     console.print(f"[dim]Budget: {config.budget.tokens} tokens, {config.budget.turns} turns[/dim]\n")
 
+    brief = scenario.get_human_brief()
+    if brief:
+        from rich.panel import Panel
+
+        console.print(Panel(brief, title="[bold]TASK — read before you start[/bold]", border_style="cyan"))
+        console.print()
+
     try:
         prompter = HumanPrompter()
         result = run_single_scenario(

@@ -77,6 +77,15 @@ class Scenario(ABC):
         """Return a scripted prompter policy, or None for default."""
         return None
 
+    def get_human_brief(self) -> str | None:
+        """Return full task instructions for human-in-the-loop mode.
+
+        Shown at the start of human mode so the human knows exactly what
+        to do (objective, schema, rubric, success criteria). Return None
+        to rely only on config.description.
+        """
+        return None
+
 
 class ScriptedPolicy:
     """A scripted prompter policy that generates user messages."""
